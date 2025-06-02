@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heat map</title>
+    <title>SafeCrossing</title>
 
     <!-- leaflet cdn link -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -33,7 +33,7 @@
 
 <script>
     // Map initialization 
-    var map = L.map('map').setView([-37.87, 175.475], 11);
+    var map = L.map('map').setView([43.704407, -79.527962], 15); //starting point is currently in the weston and 401 area York, ON, CA
 
     //osm layer
     var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
