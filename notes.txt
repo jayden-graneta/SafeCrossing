@@ -1,0 +1,15 @@
+Notes and other things about this project:
+
+project idea: High accident areas - heat 
+site name: SafeCrossing??
+
+Tech Stack I wish to implement:
+    - 
+
+
+heatmap:
+    - leaflet
+    - google maps
+    - mapbox
+    - maplibre (https://maplibre.org/)
+    -
