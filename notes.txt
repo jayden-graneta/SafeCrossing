@@ -4,12 +4,25 @@ project idea: High accident areas - heat
 site name: SafeCrossing??
 
 Tech Stack I wish to implement:
-    - 
+    - frontend:
+        * leaflet.js 
+        * maybe react 
+    - backend:
+        * node.js?
+        * next.js?
+    - databases:
+        * PostgreSQL with postGIS (for geo queries)
 
+✔️Checklist:
+    - Create functional heatmap to display data [COMPLETE] ✔️
+    - Work on landing page and core features
+        - Maybe user login? (Allow user to submit accidents)
+    - Find dataset to use (perferably city of toronto)
+    - Learn how to use PostgreSQL
+    - Finalize Techstack
 
-heatmap:
-    - leaflet
-    - google maps
-    - mapbox
-    - maplibre (https://maplibre.org/)
-    -
+Usecases for PostgreSQL:
+    - Fetch and filter incident data dynamically
+    - Calculate heatmap weights
+    - Power dashboards and stats
+    - Enable geospatial queries with PostGIS (optional but powerful)
