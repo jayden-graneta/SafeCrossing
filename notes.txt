@@ -17,7 +17,8 @@ Tech Stack I wish to implement:
     - Create functional heatmap to display data [COMPLETE] ✔️
     - Work on landing page and core features
         - Maybe user login? (Allow user to submit accidents)
-    - Find dataset to use (perferably city of toronto)
+    - Find dataset to use (perferably city of toronto) [COMPLETE] ✔️
+        - note: found dataset in GeoJSON [Chat recommends to convert to TopoJSON(smaller/more efficient)]
     - Learn how to use PostgreSQL
     - Finalize Techstack
 
@@ -26,3 +27,8 @@ Usecases for PostgreSQL:
     - Calculate heatmap weights
     - Power dashboards and stats
     - Enable geospatial queries with PostGIS (optional but powerful)
+
+
+Current DataSet: Traffic Collision report fropm the Toronto Police Serivce last updated 01/22/25 [https://data.torontopolice.on.ca/datasets/TorontoPS::traffic-collisions-open-data-asr-t-tbl-001/about]
+    - import it to leaflet.js
+    - later on load into postGIS for backend filtering/special queries
