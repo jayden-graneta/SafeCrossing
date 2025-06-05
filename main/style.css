@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background: #080808;
+    background: #313032;
     color: #fff
 }
 #header{
@@ -37,6 +37,8 @@ nav{
 
 }
 
+/* Navigation bar/logo */
+
 .logo{
     width: 140px;
 }
@@ -58,7 +60,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #1172f1;
+    background: #87a7d1;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -69,4 +71,41 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+/* landing page */
 
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* ensures top alignment  */
+    margin-top: 10%;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .header-text {
+    font-size: 30px;
+  }
+  
+  .header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+  }
+  
+  .header-text h1 span {
+    color: #87a7d1;
+  }
+
+  .header-text{
+    margin-top: 10%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span{
+    color: #87a7d1
+}

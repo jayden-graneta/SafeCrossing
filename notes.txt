@@ -1,6 +1,6 @@
 Notes and other things about this project:
 
-project idea: High accident areas - heat 
+project idea: High accident areas - heat map
 site name: SafeCrossing??
 
 Tech Stack I wish to implement:
