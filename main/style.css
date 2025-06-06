@@ -9,8 +9,8 @@ html{
 }
 
 body{
-    background: #313032;
-    color: #fff
+    background: #f0EBE3;
+    color: #black;
 }
 #header{
     width: 100%;
@@ -50,7 +50,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #fff;
+    color: black;
     text-decoration: none;
     font-size: 18x;
     position: relative;
@@ -60,7 +60,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #87a7d1;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -92,10 +92,6 @@ nav ul li a:hover::after{
     font-size: 60px;
   }
   
-  .header-text h1 span {
-    color: #87a7d1;
-  }
-
   .header-text{
     margin-top: 10%;
     font-size: 30px;
@@ -107,5 +103,27 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #87a7d1
+    color: green;
+}
+
+.header-text p {
+    font-size: 25px;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid grey;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background-color: green;
+    transition: background 0.5s;
+    margin-top: 150px;
+}
+
+.btn:hover{
+    background: #1db95a;
 }
