@@ -60,7 +60,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: black;
+    background: green;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -158,6 +158,10 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
+.about-col2 p{
+    margin-top: 15px;
+}
+
 .sub-title{
     font-size: 60px;
     font-weight: 600;
@@ -165,8 +169,9 @@ nav ul li a:hover::after{
 }
 
 /* contact seciton */
-
-
+#contact {
+    margin-top: 100px; 
+}
 
 .contact-left{
     flex-basis: 35%;
