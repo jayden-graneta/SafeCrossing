@@ -18,7 +18,7 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="#heatmap">Heatmap</a></li>
                 <li><a href="#statsistics">Statistics</a></li>
-                <li><a href="#About">Bio</a></li>
+                <li><a href="#About">About Us</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <!-- for mobile drop close menu -->
                 <!-- <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i> -->
@@ -46,7 +46,10 @@
             </div>
             <div class="about-col2">
                 <h1 class= "sub-title"> About SafeCrossing</h1>
-                <p>On June 21, 2024, my life changed drastically. I was the victim of a hit-and-run while crossing at a yield-to-pedestrians crosswalk.</p>
+                <p>On June 21, 2024, my life underwent a drastic change. I was the victim of a hit-and-run while crossing at a yield-to-pedestrians crosswalk. I had just gotten off the bus coming home from the gym when a black minivan swerved around a bus and stopped, hitting me in the middle of the crosswalk. I ended up riding the top of his hood until he finally stopped, where I was then flung onto the ground. As soon as I stood up and realized what had happened, the driver had already driven off. I was rushed to the hospital, where I would have a dime-sized piece of bone from my elbow pulled and told I needed to receive surgery to remove air in my joint and some other medical lingo I didn't understand. All in all, I tore a bunch of muscles in my forearm, received minor surgery on my elbow and had a piece of my elbow pulled out in front of me. </p>
+
+                <p>After my accident, I was unable to do any of the things which I once loved, such as going to the gym, coding or even something as simple as walking and eating became a pain. </p>
+
                 </div>
             </div>
         </div>
@@ -60,6 +63,7 @@
             <div class="contact-left"> 
                 <h1 class="sub-title">Contact Us</h1>
                 <p> <i class="fa-solid fa-envelope-open-text"></i> jayden.graneta@gmail.com</p>
+                
                 <p> <i class="fa-solid fa-phone"></i> (437) 236-9989</p>
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/jaydengraneta"><i class="fa-brands fa-linkedin"></i></a>
@@ -85,3 +89,59 @@
 </div>
 
 <!-- JavaScript Section -->
+
+<!-- About me tab script -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+<!-- small device menu side bar close and open -->
+<script>
+    var sidemenu = document.getElementById('sidemenu');
+    
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<!-- Contact form sending information to google sheet -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwBDI8ZcV1tr4C8uO7v4RcZI_e_2dsNv5XVNM6Fg1nQZw98a8Y6fJDw7511Kxhz9edq/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    
+</body>
+</html>
+
