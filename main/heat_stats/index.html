@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeCrossing</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- fontawesome icon libary -->
-    <script src="https://kit.fontawesome.com/359ccc3c21.js" crossorigin="anonymous"></script> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeCrossing</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+  <!-- Font Awesome (optional) -->
+  <script src="https://kit.fontawesome.com/359ccc3c21.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- NavBar -->
-
-<!------------------ Home page / Header section ------------------------->
-<div id="header">
+  <!-- Header/Nav -->
+  <div id="header">
     <div class="container">
-        <nav>
-            <img src="" alt="logo">
-             <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#heatmap">Heatmap</a></li>
-                <li><a href="#statsistics">Statistics</a></li>
-                <li><a href="#About">Bio</a></li>
-                <li><a href="#Contact">Contact</a></li>
-                <!-- for mobile drop close menu -->
-                <!-- <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i> -->
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">SafeCrossing</div>
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#heatmap">Heatmap</a></li>
+          <li><a href="#statistics">Statistics</a></li>
+          <li><a href="#about">Bio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-</div>
-<div class="h-1 w-full bg-black my-8"></div>
+  </div>
 
-<!-- map section -->
-<section id="heatmap" style="padding: 40px 0;">
-    <div class="container">
-        <h2>Heatmap</h2>
-        <div id="heatmap-box" style="height: 500px; width: 100%; border: 2px solid #ccc; border-radius: 10px;"></div>
+  <!-- Heatmap Section -->
+  <section id="heatmap">
+    <div class="container heatmap-wrapper">
+      <div id="map"></div>
     </div>
-</section>
+  </section>
+
+<!-- Leaflet JS & Heatmap Plugin -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="./leaflet-heat.js"></script>
+<script src="http://leaflet.github.io/Leaflet.markercluster/example/realworld.10000.js"></script>
+
+<script>
+  var map = L.map('map').setView([43.704407, -79.527962], 15);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Format and load heat layer
+  addressPoints = addressPoints.map(p => [p[0], p[1]]);
+  L.heatLayer(addressPoints).addTo(map);
+
+  // Force Leaflet to recalculate map size after load
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 100);
+</script>
+</body>
+</html>
