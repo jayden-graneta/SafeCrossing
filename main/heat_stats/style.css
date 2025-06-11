@@ -70,19 +70,26 @@ nav ul li a:hover::after {
 
 /* Heatmap Section */
 #heatmap {
-    padding: 50px 0;
+    padding: 50px ; /* try reducing or removing this */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#heatmap .container {
+  padding: 20px;
+  align-items: center;
+}
+
 .heatmap-wrapper {
-    width: 100%;
-    max-width: 1000px;
-    height: 500px;
+    width: 90%;                
+    max-width: 1200px;        
+    height: 600px;             
+    margin: 0 auto;             
     border: 2px solid #333;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); /* slight shadow */
 }
 
 #map {

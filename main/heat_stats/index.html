@@ -34,10 +34,12 @@
 
   <!-- Heatmap Section -->
   <section id="heatmap">
-    <div class="container heatmap-wrapper">
+  <div class="container">
+    <div class="heatmap-wrapper">
       <div id="map"></div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- Leaflet JS & Heatmap Plugin -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -56,9 +58,9 @@
   L.heatLayer(addressPoints).addTo(map);
 
   // Force Leaflet to recalculate map size after load
-  setTimeout(() => {
+  setTimeout(function () {
     map.invalidateSize();
-  }, 100);
+}, 100);
 </script>
 </body>
 </html>
