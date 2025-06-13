@@ -21,6 +21,9 @@ Tech Stack I wish to implement:
         - note: found dataset in GeoJSON [Chat recommends to convert to TopoJSON(smaller/more efficient)]
     - Learn how to use PostgreSQL
     - Finalize Techstack
+    - Learn how to use chart.js for stats section
+    - create figma file to help for landing page/logo section
+    - Finalize about us section 
 
 Usecases for PostgreSQL:
     - Fetch and filter incident data dynamically
