@@ -1,6 +1,6 @@
 # SafeCrossing
 
-*tbd*
+*Currently Underdevlopment*
 
 ## Technologies
 
@@ -8,6 +8,7 @@
 * Leaflet.js - Map structure 
 * CSS – Styles the user interface.
 * JavaScript – Adds interactivity.
+* PostgreSQL
 
 
 
