@@ -35,3 +35,7 @@ Usecases for PostgreSQL:
 Current DataSet: Traffic Collision report fropm the Toronto Police Serivce last updated 01/22/25 [https://data.torontopolice.on.ca/datasets/TorontoPS::traffic-collisions-open-data-asr-t-tbl-001/about]
     - import it to leaflet.js
     - later on load into postGIS for backend filtering/special queries
+
+New goals:
+    - Learn how to use PostgreSQL for data
+    - Install it on pc/setup on github
