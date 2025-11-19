@@ -1,6 +1,7 @@
 # SafeCrossing
 
-*Currently Underdevlopment*
+##About Project
+SafeCrossing is a web application that visualizes high-incident traffic areas across Toronto using an interactive heatmap. The project uses publicly available collision data from the Toronto Police Service to help users identify dangerous intersections, understand urban safety trends, and make more informed route decisions.
 
 ## Technologies
 
